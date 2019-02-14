@@ -1,51 +1,32 @@
-{  
-  "swagger" : "3.0",
-  "openapi" : "3.0.1",
+{
+  "swagger" : "2.0",
   "info" : {
-    "title" : "defaultTitle",
     "description" : "defaultDescription",
-    "version" : "0.1"
+    "version" : "0.1",
+    "title" : "defaultTitle"
   },
-  "servers" : [ {
-    "url" : "https://api.twilio.com"
-  } ],
   "paths" : {
-    "/2010-04-01" : {
+    "/2010-04-01/Accounts" : {
       "get" : {
-        "description" : "Auto generated using Swagger Inspector",
+        "produces" : [ "application/xml" ],
+        "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "Auto generated using Swagger Inspector",
-            "content" : {
-              "application/xml" : {
-                "schema" : {
-                  "type" : "string"
-                },
-                "examples" : {
-                  "0" : {
-                    "value" : "<?xml version='1.0' encoding='UTF-8'?>\n<TwilioResponse><Version><Name>2010-04-01</Name><Uri>/2010-04-01</Uri><SubresourceUris><Accounts>/2010-04-01/Accounts</Accounts></SubresourceUris></Version></TwilioResponse>"
-                  }
-                }
-              }
+            "description" : "Definition generated from Swagger Inspector",
+            "schema" : {
+              "type" : "string"
             }
           }
         },
-        "servers" : [ {
-          "url" : "https://api.twilio.com"
+        "security" : [ {
+          "Secured" : [ ]
         } ]
-      },
-      "servers" : [ {
-        "url" : "https://api.twilio.com"
-      } ]
+      }
     }
   },
-  "components" : {
-    "schemas" : { },
-    "securitySchemes" : {
-      "basic" : {
-        "type" : "http",
-        "scheme" : "basic"
-      }
+  "securityDefinitions" : {
+    "Secured" : {
+      "type" : "basic"
     }
   }
 }
